@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk42nnk0xq2u"]
+
+[ext_resource type="Texture2D" uid="uid://cbc0dwp0fkds" path="res://Assets/Icons/Weapons/axe_blue.png" id="1_oatn5"]
+[ext_resource type="Texture2D" uid="uid://cppaq4hck2rs0" path="res://Assets/Level Up & Option/GUI-export 1.png" id="2_ci26t"]
+[ext_resource type="Script" uid="uid://db8cyj25oek64" path="res://Scenes/option_slot.gd" id="2_ta2es"]
+[ext_resource type="FontFile" uid="uid://b5dhfxo722hlq" path="res://Resources/Fonts/new_font_file.tres" id="4_7i02r"]
+
+[node name="OptionSlot" type="TextureButton"]
+custom_minimum_size = Vector2(315, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+texture_normal = ExtResource("1_oatn5")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_ta2es")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 3.0
+offset_right = 92.0
+offset_bottom = 30.0
+theme_override_colors/font_shadow_color = Color(0.408329, 0.408329, 0.408329, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_7i02r")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 8.0
+offset_right = 284.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_colors/font_outline_color = Color(0.266575, 0.266575, 0.266575, 1)
+theme_override_fonts/font = ExtResource("4_7i02r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(315, 40)
+layout_mode = 0
+offset_top = -1.0
+offset_right = 315.0
+offset_bottom = 39.0
+texture = ExtResource("2_ci26t")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=11 format=3 uid="uid://ct5q6g5g1y504"]
+
+[ext_resource type="PackedScene" uid="uid://bm6yad78hxvj" path="res://Scenes/projectile.tscn" id="1_isvn7"]
+[ext_resource type="Script" uid="uid://brffr277i3265" path="res://Scenes/SingleShot.gd" id="2_mqcij"]
+[ext_resource type="Texture2D" uid="uid://b6l4coybjhedo" path="res://Assets/TopDownFantasy-Forest/wand.png" id="3_kpeyl"]
+[ext_resource type="Script" uid="uid://dh3utbvo2if2g" path="res://Scenes/Upgrade.gd" id="4_swt2p"]
+[ext_resource type="Script" uid="uid://ixkg5egk8by0" path="res://Scenes/ProjectileUpgrade.gd" id="5_r0p26"]
+
+[sub_resource type="Resource" id="Resource_7tjnn"]
+script = ExtResource("5_r0p26")
+speed = 0.0
+damage = 1.0
+cooldown = 0.0
+description = "+1 Damage"
+
+[sub_resource type="Resource" id="Resource_w7p3w"]
+script = ExtResource("5_r0p26")
+speed = 0.0
+damage = 0.0
+cooldown = -0.2
+description = "-0.2 cooldown"
+
+[sub_resource type="Resource" id="Resource_3kpid"]
+script = ExtResource("5_r0p26")
+speed = 200.0
+damage = 1.0
+cooldown = -0.5
+description = "increase projectile speed, damage and cooldown reduc"
+
+[sub_resource type="Resource" id="Resource_wb0xh"]
+script = ExtResource("5_r0p26")
+speed = 300.0
+damage = 2.0
+cooldown = -0.7
+description = "increase projectile speed, damage and cooldown reduc"
+
+[sub_resource type="Resource" id="Resource_ww7t1"]
+script = ExtResource("5_r0p26")
+speed = 500.0
+damage = 5.0
+cooldown = -1.0
+description = "BIG STATS"
+
+[resource]
+script = ExtResource("2_mqcij")
+title = "Magic Wand"
+texture = ExtResource("3_kpeyl")
+damage = 1.0
+cooldown = 1.0
+speed = 400.0
+projectile_node = ExtResource("1_isvn7")
+upgrades = Array[ExtResource("4_swt2p")]([SubResource("Resource_7tjnn"), SubResource("Resource_w7p3w"), SubResource("Resource_3kpid"), SubResource("Resource_wb0xh"), SubResource("Resource_ww7t1")])

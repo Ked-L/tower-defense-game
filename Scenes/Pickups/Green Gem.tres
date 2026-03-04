@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://bayq86sr5swnt"]
+
+[ext_resource type="Texture2D" uid="uid://dofjhbepyt6s0" path="res://Assets/Icons/Aseprite Icons/Batch File/icon_Green Gem.png" id="1_7ls3k"]
+[ext_resource type="Script" path="res://Scenes/Gem.gd" id="2_7ivxj"]
+
+[resource]
+script = ExtResource("2_7ivxj")
+XP = 3.0
+title = "Green Gem"
+icon = ExtResource("1_7ls3k")
+description = "Gains Exp"

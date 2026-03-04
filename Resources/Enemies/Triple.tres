@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://b1tayauttvax0"]
+
+[ext_resource type="Script" uid="uid://cgsy20tjia2p4" path="res://Scenes/PickupResource.gd" id="1_8s26w"]
+[ext_resource type="Script" uid="uid://b6cy3kkvkbcos" path="res://Scenes/EnemyType.gd" id="1_dx3qb"]
+[ext_resource type="Texture2D" uid="uid://cg23jmwhjb67e" path="res://Assets/Enemies/4 v1.png" id="2_8qosk"]
+[ext_resource type="Resource" uid="uid://bayq86sr5swnt" path="res://Scenes/Pickups/Green Gem.tres" id="2_amn4i"]
+
+[resource]
+script = ExtResource("1_dx3qb")
+title = "Triple"
+texture = ExtResource("2_8qosk")
+health = 7.0
+damage = 10.0
+drops = Array[ExtResource("1_8s26w")]([ExtResource("2_amn4i")])

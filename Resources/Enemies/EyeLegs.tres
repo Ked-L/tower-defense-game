@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bkiyjokrsyxlk"]
+
+[ext_resource type="Script" uid="uid://cgsy20tjia2p4" path="res://Scenes/PickupResource.gd" id="1_cvete"]
+[ext_resource type="Script" uid="uid://b6cy3kkvkbcos" path="res://Scenes/EnemyType.gd" id="1_qariq"]
+[ext_resource type="Texture2D" uid="uid://b7n3q5tijiytm" path="res://Assets/Enemies/3 v1.png" id="2_otrg0"]
+[ext_resource type="Resource" uid="uid://bayq86sr5swnt" path="res://Scenes/Pickups/Green Gem.tres" id="2_vv8l3"]
+
+[resource]
+script = ExtResource("1_qariq")
+title = "EyeLegs"
+texture = ExtResource("2_otrg0")
+health = 7.0
+damage = 9.0
+drops = Array[ExtResource("1_cvete")]([ExtResource("2_vv8l3")])
